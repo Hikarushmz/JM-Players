@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jxxy's Music Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="music-player">
+        <div class="player-container">
+            <div class="album-art"></div>
+            <div class="song-info">
+                <div class="song-title">Song Title</div>
+                <div class="artist">Artist Name</div>
+            </div>
+
+            <div class="controls">
+                <div class="progress-bar">
+                    <div class="progress" id="song-progress"></div>
+                    <div class="time-info">
+                        <span class="current-time">0:00</span>
+                        <span class="total-time">0:00</span>
+                    </div>
+                </div>
+                <div class="button-controls">
+                    <i class="fas fa-random shuffle"></i>
+                    <i class="fas fa-step-backward previous"></i>
+                    <i class="fas fa-play-circle play-pause"></i>
+                    <i class="fas fa-step-forward next"></i>
+                    <i class="fas fa-repeat loop"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="playlist-header">
+                <h3>Song List</h3>
+                <div class="playlist-actions">
+                    <input type="file" id="add-music" accept="audio/*" multiple style="display: none;">
+                    <label for="add-music" title="Add Music">
+                        <i class="fas fa-folder-plus"></i>
+                    </label>
+                </div>
+            </div>
+            <div class="song-list-container">
+                <ul class="songs">
+                    </ul>
+            </div>
+        </div>
+		<div class="color-picker-container">
+            <input type="color" id="color-picker" value="#ffd700">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
